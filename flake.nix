@@ -21,8 +21,18 @@
       modules = [
         ./hosts/seashellVM/configuration.nix
         inputs.home-manager.nixosModules.default
+	{
+	  home-manager.useGlobalPkgs = true;
+	  home-manager.useUserPackages = true;
+
+	  home-manager.users.aquanull = import ./hosts/seashellVM/home.nix;
+	}
 	./modules/nixos/main-user.nix
       ];
+    };
+    homeConfiguration.aquanull = inputs.home-manager.lib.homeManagerConfiguration {
+      pkgs = inputs.nixpkgs.lagacyPackages.x86_64-linux;
+      modules = [ ./hosts/seashellVM/home.nix ];
     };
   };
 }

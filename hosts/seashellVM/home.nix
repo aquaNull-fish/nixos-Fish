@@ -6,8 +6,8 @@
 
   home.stateVersion = "26.05";
 
-  home.packages = [
-    pkgs.hello
+  home.packages = with pkgs; [
+    fzf
   ];
 
   home.file = {
