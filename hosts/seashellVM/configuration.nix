@@ -75,12 +75,12 @@
 #    extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "aquanull" = import ./home.nix;
-    };
-  };
+#  home-manager = {
+#    extraSpecialArgs = { inherit inputs; };
+#    users = {
+#      "aquanull" = import ./home.nix;
+#    };
+#  };
   
   programs.fish.enable = true;
   programs.firefox.enable = true;
@@ -88,12 +88,10 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    vim
     neovim
     wget
     alacritty
     sl
-    fish
     git
     tree
   ];
