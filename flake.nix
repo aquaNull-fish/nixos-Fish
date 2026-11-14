@@ -30,9 +30,5 @@
 	./modules/nixos/main-user.nix
       ];
     };
-#    homeConfiguration.aquanull = inputs.home-manager.lib.homeManagerConfiguration {
-#      pkgs = inputs.nixpkgs.lagacyPackages.x86_64-linux;
-#      modules = [ ./hosts/seashellVM/home.nix ];
- #   };
   };
 }

@@ -74,13 +74,6 @@
     userName = "aquanull";
 #    extraGroups = [ "networkmanager" "wheel" ];
   };
-
-#  home-manager = {
-#    extraSpecialArgs = { inherit inputs; };
-#    users = {
-#      "aquanull" = import ./home.nix;
-#    };
-#  };
   
   programs.fish.enable = true;
   programs.firefox.enable = true;
